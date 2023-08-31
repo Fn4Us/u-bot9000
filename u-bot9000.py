@@ -18,14 +18,15 @@ subreddit_data = [
 username_to_check = 'u-bot9000'
 
 randomReply = [
-    "U           U\n \nU           U\n \nUUUUUU\n \nU           U\n \nU           U",
-    "H           H\n \nH           H\n \nH           H\n \nH           H\n \n HHHH",
-    "  U        U                H        H\n \n"
-      "  U         U      #     H        H\n \n"
-      "  UUUUU    ###    H        H\n \n"
-      "  U        U      #       H        H\n \n"
-      "  U        U                  HHH"
-] #Reddit ascii is so finicky
+  "H and U are both good. HU UNION!!!",
+  "I love H, I also love U",
+  "HU 👍",
+  "H + U = 👍",
+  "HEIJAK needs U",
+  "H ❤️ U",
+  "𝙃𝙐",
+  "Move aside 𝕏, we have ℍ𝕌"
+]
 
 keep_alive()
 
