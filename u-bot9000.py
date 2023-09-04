@@ -20,7 +20,7 @@ phrases_and_responses = {
 }
 
 subreddit_data = [
-    {'name': 'theletterh', 'reply_text': 'H is cool, and so is U \n\n ^(I am a bot, and this action was performed automatically. If you think this is a mistake, leave TheLetterH. If you still think this is a mistake, please) [^(contact me here.)](https://www.reddit.com/message/compose/?to=u-bot9000)'},
+    {'name': 'theletterh', 'reply_text': 'H is cool, and so is U \n\n ^(I am a bot, and this action was performed automatically. If you think this is a mistake, leave TheLetterH. If you still think this is a mistake, please) [^(contact me here.)](https://www.reddit.com/message/compose/?to=u-bot9000&subject=The%20bot%27s%20broken)'},
     {'name': 'theletteru', 'reply_text': 'egg'}
 ]
 
@@ -72,7 +72,7 @@ def process_new_posts(subreddit_name, reply_text):
 
 # Create two threads for concurrent execution of the functions
 thread_run = threading.Thread(target=run)
-thread_process = threading.Thread(target=process_new_posts, args=('theletterh', 'H is cool, and so is U \n\n ^(I am a bot, and this action was performed automatically. If you think this is a mistake, leave TheLetterH. If you still think this is a mistake, please) [^(contact me here.)](https://www.reddit.com/message/compose/?to=u-bot9000)'))
+thread_process = threading.Thread(target=process_new_posts, args=('theletterh', 'H is cool, and so is U \n\n ^(I am a bot, and this action was performed automatically. If you think this is a mistake, leave TheLetterH. If you still think this is a mistake, please) [^(contact me here.)](https://www.reddit.com/message/compose/?to=u-bot9000&subject=The%20bot%27s%20broken)'))
 
 
 # Start all threads
