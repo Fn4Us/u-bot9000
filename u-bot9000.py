@@ -1,15 +1,14 @@
 import praw
 import random
 import threading
-import time
 from keep_alive import keep_alive
 
 reddit = praw.Reddit(
     client_id="W1T_uV33O1NvXwmtVbwH-Q",
-    client_secret="####################",
+    client_secret="#####################",
     user_agent="<console:u-bot9000:1.0>",
     username="u-bot9000",
-    password="############")
+    password="###########")
 
 # List of phrases and their corresponding responses
 phrases_and_responses = {
@@ -21,13 +20,13 @@ phrases_and_responses = {
 
 subreddit_data = [
     {'name': 'theletterh', 'reply_text': 'H is cool, and so is U \n\n ^(I am a bot, and this action was performed automatically. If you think this is a mistake, leave TheLetterH. If you still think this is a mistake, please) [^(contact me here.)](https://www.reddit.com/message/compose/?to=u-bot9000&subject=The%20bot%27s%20broken)'},
-    {'name': 'theletteru', 'reply_text': 'egg'}
+    {'name': 'theletteru', 'reply_text': 'egg'} # Ignore this one the code fails when I remove it
 ]
 
 username_to_check = 'u-bot9000' # This is blunderful code but I dont want to change it
 
 randomReply = [
-    "H and U are both good. HU UNION!!!",
+    "H and U are both good. HUnion!!!",
     "I love H, I also love U",
     "HU 👍",
     "H + U = 👍",
