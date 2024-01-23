@@ -13,15 +13,14 @@ reddit = praw.Reddit(client_id="XXXXXXXXXXXXXXXXXXXXX",
 print('running')
 
 subreddit = reddit.subreddit("theletterh")
-
 username_to_check = 'NotAlreadyUsed'  # This is blunderful code but I dont want to change it
-
 randomReply = [
     "H and U are both good. HUnion!!!", "I love H, I also love U", "HU 👍",
     "H + U = 👍", "HEIJAK needs U", "H ❤️ U", "𝙃𝙐", "Move aside 𝕏, we have ℍ𝕌",
     "Ƕ", "}·{ ]_[", "HU her? I hardly know her!", "H and U are the best, AMA", "I am ***H***appy this is working, are yo***U***?"
 ]
-
+newPostReply = ["H is wonderful, and so is U", "H is cool, and so is U"]
+newPostFooter = "\n\n ^(I am a bot, and this action was performed automatically. If you think this is a mistake, leave TheLetterH. If you still think this is a mistake, please) [^(contact me here.)](https://www.reddit.com/message/compose/?to=u-bot9000&subject=The%20bot%27s%20broken)"
 replies = ["h", "ℋ", "*h*", "**h**", "~~literally anything else~~ h", "h is awesome :]", "h :]", "# h", "# **h**"]
 
 
@@ -42,27 +41,14 @@ def process_new_posts(subreddit_name):
   subreddit = reddit.subreddit(subreddit_name)
   for submission in subreddit.stream.submissions(skip_existing=True):
     if submission.author and submission.author.name != username_to_check:
-      prob = random.randint(0, 1000)
-      if prob == 1:
-        probe = random.randint(0, 10000)
-        if probe == 1:
-          print("MEGA JACKPOT!!!")
-          submission.reply(
-              "LUCKY U!!!! THIS COMMENT HAS A 1/10000 CHANCE OF HAPPENINQ!!!")
-        else:
-          print("JACKPOT")
-          submission.reply(
-              "Lucky H! This comment has a 1/1000 chance of happeninq!")
+      if random.randint(0, 1000) == 1:
+        print("JACKPOT")
+        submission.reply("Lucky H! This comment has a 1/1000 chance of happeninq!")
+      elif random.randint(0, 10000) == 1:
+        print("MEGA JACKPOT!!!")
+        submission.reply("LUCKY U!!!! THIS COMMENT HAS A 1/10000 CHANCE OF HAPPENINQ!!!")
       else:
-        prob = random.randint(0, 2)
-        if prob == 1:
-          submission.reply(
-              "H is wonderful, and so is U \n\n ^(I am a bot, and this action was performed automatically. If you think this is a mistake, leave TheLetterH. If you still think this is a mistake, please) [^(contact me here.)](https://www.reddit.com/message/compose/?to=u-bot9000&subject=The%20bot%27s%20broken)"
-          )
-        else:
-          submission.reply(
-              "H is cool, and so is U \n\n ^(I am a bot, and this action was performed automatically. If you think this is a mistake, leave TheLetterH. If you still think this is a mistake, please) [^(contact me here.)](https://www.reddit.com/message/compose/?to=u-bot9000&subject=The%20bot%27s%20broken)"
-          )
+        submission.reply(random.choice(newPostReply) , newPostFooter)
       print(f"Replied to the post with ID: {submission.id}")
       print(f"Post Title: {submission.title}")
 
